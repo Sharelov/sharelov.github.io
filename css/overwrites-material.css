@@ -1,0 +1,31 @@
+
+.article {
+    font-size: 15px;
+}
+
+.article .wrapper {
+    padding: 67px 24px 96px;
+}
+
+.article h1{
+    margin-bottom: 30px;
+    padding: 20px 0 10px;
+    font-size: 32px;
+    /*color: #f44336;*/
+}
+
+.article h2{
+    font-size: 26px;
+    /*color: #e57373;*/
+}
+
+.article h3{
+    font-size: 20px;
+}
+
+.article h4{
+    /*color: #1e88e5;*/
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom:10px;
+}
