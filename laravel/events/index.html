@@ -97,7 +97,7 @@
                         
                             
 <li >
-    <a href="../../getting-started/instalation/">Requirements and Installation</a>
+    <a href="../../getting-started/installation/">Requirements and Installation</a>
 </li>
 
                         
@@ -375,18 +375,18 @@
 <h2 id="events">Events</h2>
 <p><code>Events</code> are located in: <code>App\Events\</code>.</p>
 <p><code>Events</code> are grouped in folders and organized, for the most part, by first-class citizen <a href="../../getting-started/domain/">domain components</a>.</p>
-<p>These are some of the rules must be enforced when creating/updating <code>events</code>:</p>
+<p>These are some of the rules that must be enforced when creating/updating <code>events</code>:</p>
 <ul>
 <li>We usually, but not exclusively, use <code>events</code> when our main <code>domain</code> components change: <code>BrandWasCreated</code>, <code>CampaignWasAuthorized</code>, etc.</li>
 <li><code>Events</code> are usually named in past tense: <code>MembershipWasCreated</code> to reflect the event.</li>
 <li><code>Events</code> are usually (but not exclusively) triggered in the appropriate <code>Repository</code>'s method. For example: <code>MembershipWasCreated</code> is triggered in <code>MembershipRepositoryEloquent::create()</code>.</li>
-<li>Since all classes sent to the <code>queue</code> is <a href="https://laravel.com/docs/5.2/queues#generating-job-classes">serialized</a> it's better to convert models and eloquent collections to array using the <code>toArray()</code> method in order to avoid headaches when the Listener receives the data to be processed.</li>
+<li>Since all classes sent to the <code>queue</code> are <a href="https://laravel.com/docs/5.2/queues#generating-job-classes">serialized</a> it's better to convert models and eloquent collections to array using the <code>toArray()</code> method in order to avoid headaches when the Listener receives the data to be processed.</li>
 </ul>
 <h2 id="listeners">Listeners</h2>
 <p><code>Listeners</code> are located in: <code>App\Listeners\</code>.</p>
 <p><code>Listeners</code> are grouped in folders and organized, for the most part, by first-class citizen <a href="../../getting-started/domain/">domain components</a>.</p>
 <p><code>Listeners</code> are registered in the <a href="https://laravel.com/docs/5.2/events#registering-events-and-listeners">event service provider</a></p>
-<p>These are some of the rules must be enforced when creating/updating <code>events</code>:</p>
+<p>These are some of the rules that must be enforced when creating/updating <code>events</code>:</p>
 <ul>
 <li><code>Listeners</code> are usually named in present tense: <code>SendCampaignNotification</code> to reflect the action.</li>
 </ul></div>

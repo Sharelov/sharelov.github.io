@@ -97,7 +97,7 @@
                         
                             
 <li >
-    <a href="../../getting-started/instalation/">Requirements and Installation</a>
+    <a href="../../getting-started/installation/">Requirements and Installation</a>
 </li>
 
                         
@@ -371,7 +371,7 @@
 <p>All <code>Posts Requests</code> classes must be extended from the <code>App\Http\Requests</code> class, which have extra functionality useful when doing validation. Other extended classes are used when necessary.</p>
 <h3 id="input-sanitation">Input Sanitation</h3>
 <p>It's possible to sanitize user input content using the method <code>sanitize()</code> located in <code>App\Http\Requests</code>. PHP <a href="http://php.net/manual/en/function.filter-var.php">filter_var</a> and <a href="http://php.net/manual/en/filter.filters.sanitize.php">Sanitation Filters</a> are used to perform the sanitation.</p>
-<p>In order to know which inputs and what type of sanitation will be applied the <code>post request</code> class must have a attribute <code>$sanitize_rules</code> with an array of the sanitation rules. Example:</p>
+<p>In order to know which inputs and what type of sanitation will be applied the <code>post request</code> class must have an attribute <code>$sanitize_rules</code> with an array of the sanitation rules. Example:</p>
 <pre class="code"><code class="language-php">/**
  * Sanitation Rules
  */

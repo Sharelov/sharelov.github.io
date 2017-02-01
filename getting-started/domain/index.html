@@ -97,7 +97,7 @@
                         
                             
 <li >
-    <a href="../instalation/">Requirements and Installation</a>
+    <a href="../installation/">Requirements and Installation</a>
 </li>
 
                         
@@ -326,7 +326,7 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../instalation/">
+                        <a rel="next" href="../installation/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
@@ -397,26 +397,26 @@
 <p>Is important to follow this terminology throughout the the project in order to maintain consistency. If new terminology is needed, it should be discussed collectively first.</p>
 <h2 id="brand">Brand</h2>
 <p><strong>Model</strong>: Brand</p>
-<p>A <code>Brand</code> is a group that contains multiple <code>Campaigns</code> and it belogns to a <code>Subscription</code>.  There are also other components that can be associated to a <code>Brand</code>:</p>
+<p>A <code>Brand</code> is a group that contains multiple <code>Campaigns</code> and it belongs to a <code>Subscription</code>.  There are also other components that can be associated to a <code>Brand</code>:</p>
 <ul>
 <li><code>Teammates (Memberships)</code>: The authorized users can authorize other teammates to work on a <code>Brand</code>.</li>
 <li><code>Social Accounts</code>: Social Media Accounts need to be assigned to the <code>Brand</code> so they can be available in that <code>Brand</code>'s <code>Campaigns</code>.</li>
-<li><code>Tags</code>: These are basically categories used to group <code>Publications</code>. <strong>Brand tags</strong> are available to all <code>Publications</code> in that <code>Brand</code>.</li>
+<li><code>Tags</code>: These are categories used to group Publications. <strong>Brand tags</strong> are available to all <code>Publications</code> in that <code>Brand</code>.</li>
 <li><code>Files</code>: images.</li>
 </ul>
 <h2 id="campaigns">Campaigns</h2>
 <p><strong>Model</strong>: Campaign</p>
-<p>A <code>Campaign</code> is a collection of <code>Publications</code> (posts, tweets...) and it belongs to a <code>Brand</code>. There are other components that can be associated to a <code>Campaign</code>:</p>
+<p>A <code>Campaign</code> is a collection of <code>Publications</code> (posts, tweets, etc.) and it belongs to a <code>Brand</code>. There are other components that can be associated to a <code>Campaign</code>:</p>
 <ul>
-<li><code>Social Accounts</code>: Depending of the type, a <code>Campaign</code> can have one (1) Social Media Account associated to it.</li>
-<li><code>Client Memberships</code>: Clients cannot see a <code>Campaigns</code> unless they are included as a <code>teammate</code> (or <code>authorized</code> [<a href="../../sharelov/access-control/#authorization" title="Link">📄</a>]) to the it.</li>
+<li><code>Social Accounts</code>: Depending on the type, a <code>Campaign</code> can have one (1) Social Media Account associated to it.</li>
+<li><code>Client Memberships</code>: Clients cannot see a <code>Campaign</code> unless they are included as a <code>teammate</code> (or <code>authorized</code> [<a href="../../sharelov/access-control/#authorization" title="Link">📄</a>]) to it.</li>
 <li><code>Tags</code>: They are the same as <strong>Brand tags</strong>, but only available to the <code>Publications</code> of the <code>Campaign</code> they are associated to.</li>
 </ul>
 <h2 id="publications">Publications</h2>
 <p><strong>Base Model</strong>: Publication</p>
 <p><strong>Specific Models</strong>: Publications/*</p>
-<p>A Publication belongs to a <code>Campaign</code> and is what is eventually sent to a <code>Social Account</code> (or <strong>published</strong>).</p>
-<p>A publication may have multiple components associated to it:</p>
+<p>A <code>Publication</code> belongs to a <code>Campaign</code> and is eventually sent to a <code>Social Account</code> (or <strong>published</strong>).</p>
+<p>A <code>Publication</code> may have multiple components associated to it:</p>
 <ul>
 <li><code>Files</code>: images, videos, etc.</li>
 <li><code>Placeholders</code>: A Placeholder is a special type o image created dynamically with the text that user specifies.</li>
@@ -425,16 +425,16 @@
 </ul>
 <h2 id="user">User</h2>
 <p><strong>Model</strong>: User</p>
-<p>An <code>User</code> is the container for the user information (email, name, last name...). Since Sharelov is a subscription based app, the user could potentially belong to different <code>Subscriptions</code>, so, in order not to repeat the user information, we use the <strong>pivot</strong> <code>Membership</code>.</p>
+<p>The <code>User</code> is the container for the user information (email, name, last name, etc.). Since Sharelov is a subscription based app, the user could potentially belong to different <code>Subscriptions</code>, so, in order not to repeat the user information, we use the <strong>pivot</strong> <code>Membership</code>.</p>
 <h2 id="subscription">Subscription</h2>
 <p><strong>Model</strong>: Subscription</p>
-<p>A <code>Subscription</code> it's the primary container where all other components live.</p>
+<p>A <code>Subscription</code> is the primary container where all other components live.</p>
 <p>A <code>Subscription</code> is basically a Sharelov account. The only way to create a <code>Subscription</code> is to fill up <a href="https://app.sharelov.com/signup">Sharelov's sign up form</a>.</p>
-<p>There can be only one <strong>owner</strong> <code>Membership</code> and one <code>User</code> per <code>Subscription</code>.</p>
+<p>There can only be one <strong>owner</strong> <code>Membership</code> and one <code>User</code> per <code>Subscription</code>.</p>
 <h2 id="membership">Membership</h2>
 <p><strong>Model</strong>: Membership</p>
 <p>A <code>Membership</code> is the association (pivot) between the <code>Subscription</code> and the <code>User</code>.</p>
-<p>An <code>User</code> can have multiple <code>Memberships</code>, and each <code>Memberships</code> belongs to only one <code>Subscription</code>.</p>
+<p>The <code>User</code> can have multiple <code>Memberships</code>, and each <code>Membership</code> belongs to only one <code>Subscription</code>.</p>
 <p>A <code>Brand</code> <strong>Team</strong> consists of a collection of <code>Memberships</code> assigned to that <code>Brand</code>.</p>
 <h2 id="chart">Chart</h2>
 <p><img alt="Sharelov Domain Chart" src="../../images/domain_chart.jpg" /></p></div>

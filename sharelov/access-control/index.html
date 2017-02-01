@@ -97,7 +97,7 @@
                         
                             
 <li >
-    <a href="../../getting-started/instalation/">Requirements and Installation</a>
+    <a href="../../getting-started/installation/">Requirements and Installation</a>
 </li>
 
                         
@@ -388,8 +388,8 @@
 <p><code>Permissions</code> have control over which <code>type of user</code> (<a href="../../sharelov/user-types" title="Link">📄</a>) can access specific sections (<code>brand.create</code>) or perform specific <code>actions</code> (<code>brand.store</code>) inside the app. Permissions are located in an array in the <code>configuration folder</code> (<a href="../../laravel/config" title="Link">📄</a>).</p>
 <p>They can target, either specific or multiple <code>actions</code> or <code>sections</code> and associate it with one or multiple <code>user types</code>.</p>
 <h3 id="naming">Naming</h3>
-<p>The key of the array functions as the name of the <code>permission</code>.</p>
-<p><code>Permissions</code> are named using the <a href="https://laravel.com/docs/5.5.2/controllers#restful-resource-controllers">RESTful</a> convention. They can match the <a href="../../laravel/routes/#writing-routes">name of a route</a> (<code>brands.campaigns</code>) to target multiple <code>actions</code> of that route, but the can also match the route's name plus the <code>action</code> (<code>brands.campaigns.create</code>) to target a specific action.</p>
+<p>The key of the array functions is the name of the <code>permission</code>.</p>
+<p><code>Permissions</code> are named using the <a href="https://laravel.com/docs/5.5.2/controllers#restful-resource-controllers">RESTful</a> convention. They can match the <a href="../../laravel/routes/#writing-routes">name of a route</a> (<code>brands.campaigns</code>) to target multiple <code>actions</code> of that route, but they can also match the route's name plus the <code>action</code> (<code>brands.campaigns.create</code>) to target a specific action.</p>
 <p>When using a routes' name (<code>brands.campaigns</code>) as a <code>permission</code>'s name it's important to know that <strong>only one level <code>action</code> will match</strong>. For example, <code>brands.campaigns.create</code> and <code>brands.campaigns.update</code> will match, but <code>brands.campaigns.uploads.destroy</code> will not match. For that a <code>brands.campaigns.uploads</code> must be used.</p>
 <h3 id="options">Options</h3>
 <ul>
@@ -458,7 +458,7 @@
 </ul>
 </div>
 <p><code>Authorizations</code> have control over which models/database records a <code>membership</code> (<a href="../../getting-started/domain/#membership" title="Link">📄</a>) has access to.</p>
-<p>When <code>authorizations</code> are properly implemented only certain <code>user types</code> would be able to access records from the restricted model directly. If <code>memberships</code> from other <code>user types</code> need to access those records they they must be <code>authorized</code>.</p>
+<p>When <code>authorizations</code> are properly implemented only certain <code>user types</code> would be able to access records from the restricted model directly. If <code>memberships</code> from other <code>user types</code> need to access those they must be <code>authorized</code>.</p>
 <p><code>Authorizations</code> will be saved in the <code>autorizaciones</code> table and uses the <code>Autorizacion</code> model.</p>
 <h3 id="implementation">Implementation</h3>
 <p>Implementing <code>authorization</code> in a model requires:</p>

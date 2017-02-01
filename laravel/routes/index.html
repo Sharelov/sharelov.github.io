@@ -97,7 +97,7 @@
                         
                             
 <li >
-    <a href="../../getting-started/instalation/">Requirements and Installation</a>
+    <a href="../../getting-started/installation/">Requirements and Installation</a>
 </li>
 
                         
@@ -440,16 +440,16 @@
 </ul>
 </div>
 <p><code>Routes</code> primary files are located in: <code>App\Http\</code>.</p>
-<p><code>Routes</code> are divided by <code>Web</code> (routes_web.php), <code>Webhooks</code> (routes_web_hooks.php) and <code>API</code> (routes_api.php) (currently not used). Those files contain, either routes or/and includes to other files in the <code>Routes</code> folder.</p>
-<p><code>Route</code> includes are grouped, for the most part, by first-class citizen <a href="../../getting-started/domain/">domain components</a>, with the exception of functional ones like auth or the ones used for testing.</p>
+<p><code>Routes</code> are divided by <code>Web</code> (routes_web.php), <code>Webhooks</code> (routes_web_hooks.php) and <code>API</code> (routes_api.php) (currently not used). These files contain, either <code>Routes</code> or/and <code>includes</code> to other files in the <code>Routes</code> folder.</p>
+<p><code>Routes includes</code> are grouped, for the most part, by first-class citizen <a href="../../getting-started/domain/">domain components</a>, with the exception of functional ones like auth or the ones used for testing.</p>
 <h3 id="writing-routes">Writing Routes</h3>
-<p>These are some of the rules must be enforced when creating/updating <code>routes</code>:</p>
+<p>These are some of the rules that must be enforced when creating/updating <code>routes</code>:</p>
 <ul>
 <li>For consistency no closures are used, so all <code>routes</code> have a controller associated to it.</li>
 <li>All <code>routes</code> <strong>must have names</strong>. Names must use the <code>RESTful</code> convention, example: <code>brands.create</code>.</li>
 <li>For consistency no <a href="https://laravel.com/docs/5.3/routing#route-model-binding">Route Model Binding</a> is used.</li>
 </ul>
-<p>Also, For the most part, Sharelov uses <a href="https://laravel.com/docs/5.2/controllers#restful-nested-resources">RESTful nested resources</a> to organize as a way to organize routes and controllers.</p>
+<p>Also, for the most part, Sharelov uses <a href="https://laravel.com/docs/5.2/controllers#restful-nested-resources">RESTful nested resources</a> to organize as a way to organize routes and controllers.</p>
 <p>Here's an example:</p>
 <pre class="code"><code class="language-php">// brands.campaigns.index
 // line brakes for readability
@@ -481,7 +481,7 @@ Route::get(
 <li>Since we are working with <code>RESTful</code>, <strong>all public methods must conform to the <code>RESTful</code> naming convention</strong>. Each public method must be name the same as a <code>RESTful</code> action (index, create, store, show, edit, update, destroy) and each controller should not have more than seven public methods.</li>
 <li>Controllers are allowed to have protected (internal) methods that don't follow the <code>RESTful</code> convention.</li>
 <li>For components related to a controller (files, comments, etc.) <strong>a new controller should be created with one or more of the <code>RESTful</code> methods</strong>.</li>
-<li>The name of the controller should define the type of action, not the methods, example: <code>CampaingImagesController</code>, <code>CampaingCommentsController</code>.</li>
+<li>The name of the controller should define the type of action, not the methods. For example: <code>CampaingImagesController</code>, <code>CampaingCommentsController</code>.</li>
 </ul>
 <p>Here's an example of a <code>RESTful</code> controllers:</p>
 <pre class="code"><code class="language-php">&lt;?php

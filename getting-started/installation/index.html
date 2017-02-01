@@ -366,11 +366,11 @@
 <h1 id="requirements-and-installation">Requirements and Installation</h1>
 <p>List of requirements needed to install a local copy of Sharelov on your  development environment.</p>
 <h2 id="git">Git</h2>
-<p>Sharelov lives in a private <a href="https://bitbucket.com">Bitbucket</a> repository. You need to be a included in the Chat Agency Bitbucket group in order to access the repository.</p>
+<p>Sharelov lives in a private <a href="https://bitbucket.com">Bitbucket</a> repository. You need to be included in the Chat Agency Bitbucket group in order to access the repository.</p>
 <p>Sharelov uses <a href="https://datasift.github.io/gitflow/IntroducingGitFlow.html">Git Flow</a> as a branching model. Although is possible to use <code>Git Flow</code> using the Terminal/Command prompt (<a href="http://danielkummer.github.io/git-flow-cheatsheet/">Here's a cheat sheat</a>), most of us prefer to use <a href="https://www.sourcetreeapp.com/">Sourcetree</a>, a GUI for <code>Git</code>. Here's how to implement <a href="https://blog.sourcetreeapp.com/2012/08/01/smart-branching-with-sourcetree-and-git-flow/">Git Flow with Sourcetree</a>.</p>
 <h2 id="server-requirements">Server Requirements</h2>
-<p>Sharelov's requirements are the same as <a href="https://laravel.com/docs/5.3/installation#server-requirements">Laravel 5.2 requirements</a>. Just so you know, we run <code>PHP 7.0</code> on our production server so can use 7.0 syntax without a problem. For a database, Sharelov uses <code>MySQL</code> 5.6 in production.</p>
-<p>Ohter requirements:</p>
+<p>Sharelov's requirements are the same as Laravel 5.2 requirements. We run PHP 7.0 on our production server so can use 7.0 syntax without a problem. Also, Sharelov uses MySQL 5.6 in production for a database.</p>
+<p>Other requirements:</p>
 <ul>
 <li>Composer</li>
 <li>Node and NPM<ul>
@@ -379,9 +379,9 @@
 </li>
 <li>Bower</li>
 </ul>
-<p>...Or, you can skip the pain of configuring all that and use <a href="https://github.com/laravel/homestead">Laravel Homestead</a> box. The latest version works just fine.</p>
+<p>Also, you can skip the difficulty of configuring all that and use <a href="https://github.com/laravel/homestead">Laravel Homestead</a> box instead.</p>
 <h2 id="installation">Installation</h2>
-<p>Once an admin has granted permissions you must do the following:</p>
+<p>Once an admin has granted you permissions you must do the following:</p>
 <ul>
 <li>Clone the repository:</li>
 </ul>
@@ -406,11 +406,11 @@ DB_PASSWORD=password</code></pre>
 <li>Change/add other <a href="../../sharelov/environments/">environment</a> configuration as needed</li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">composer update</p>
-<p>Never user the generic <code>composer update</code>, only <code>composer install</code>. If a single dependency needs to be updated use: <code>composer update repository/dependency</code> so they can be fully tested one at a time. <a href="https://dotdev.co/why-the-composer-lock-file-matters-c8d1e1488be7">Read about why</a>.</p>
+<p class="admonition-title">Composer Update</p>
+<p>Never use the generic <code>composer update</code>, only <code>composer install</code>. If a single dependency needs to be updated use: <code>composer update repository/dependency</code> so they can be fully tested one at a time. <a href="https://dotdev.co/why-the-composer-lock-file-matters-c8d1e1488be7">Read about why</a>.</p>
 </div>
 <ul>
-<li>Open the terminal/command prompt and Run the following commands in Sharelov's <code>root</code>:<ul>
+<li>Open the terminal/command prompt and run the following commands in Sharelov's root:<ul>
 <li><code>composer install</code>,</li>
 <li><code>npm install</code>,</li>
 <li><code>bower install</code>,</li>

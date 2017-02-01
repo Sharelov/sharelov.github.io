@@ -97,7 +97,7 @@
                         
                             
 <li >
-    <a href="../instalation/">Requirements and Installation</a>
+    <a href="../installation/">Requirements and Installation</a>
 </li>
 
                         
@@ -331,7 +331,7 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../instalation/">
+                        <a rel="prev" href="../installation/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -361,11 +361,11 @@
         <div class="col-md-9" role="main">
 
 <h1 id="important-note">Important Note</h1>
-<p>You may notice a couple of incongruencies in the codebase.</p>
+<p>You may notice some inconsistencies in the codebase.</p>
 <h2 id="language">Language</h2>
-<p>A first Sharelov was written using Spanish. When the decision to change it to English was made a lot of code was translated, but there is still core functionality that hasn't yet been changed. Important pieces are: the primary path where Shavelov lives (<code>Libreria</code>) and the database tables (<code>Archivos</code>). The absence of automatic tests make it more difficult to translate random pieces of code. A strategy to translate the more delicate components is being considered. In the meantime, if you encounter any functionality in Spanish and feel comfortable with the language consider the following:</p>
+<p>At first, Sharelov was written in Spanish. Then, the code was translated it to English but there is still core functionality that hasn't yet been changed. Important pieces are: the primary path where Shavelov lives (Libreria) and the database tables (Archivos). The absence of automatic tests makes it more difficult to translate random pieces of code. A strategy to translate more delicate components is being considered. In the meantime, if you encounter any functionality in Spanish and feel comfortable with the language consider the following:</p>
 <ul>
-<li>if local scoped variables are found a search and replace can be used:</li>
+<li>If local scoped variables are found, a search and replace can be used:</li>
 </ul>
 <p>before:</p>
 <pre class="code"><code>public function destroy($id)
@@ -450,8 +450,8 @@ public function getArchivo($path, $disk = '')
 
 
 <h2 id="new-code">New Code</h2>
-<p>Documentation for the project started in version <code>0.46.0</code>. Since then we started a refactoring effort to make all code conform to the documentation, but there's still a considerable amount left.</p>
-<p>New Code must adhere to the documentation and not to the existing code whenever there's a discrepancy.</p></div>
+<p>Documentation for the project started in version 0.46.0. Since then we started a refactoring effort to make all code similar to the documentation but there's still a considerable amount left.
+Whenever there's a discrepancy, New Code must adhere to the documentation and not to the existing code.</p></div>
         
     </div>
 

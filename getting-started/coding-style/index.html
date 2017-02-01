@@ -97,7 +97,7 @@
                         
                             
 <li >
-    <a href="../instalation/">Requirements and Installation</a>
+    <a href="../installation/">Requirements and Installation</a>
 </li>
 
                         
@@ -383,8 +383,8 @@
 </div>
 <p>Because we use Lavavel as our main framework, it's important to follow the same conventions in order to maintain consistency.  </p>
 <h2 id="psr-1">PSR-1</h2>
-<p><a href="http://www.php-fig.org/psr/psr-1/">PSR-1</a> is a PHP "Basic Coding Standard". It defines how the basic structures (if, else, functions...) and statements (includes. namespaces...) should be styled.</p>
-<p>In addition to <code>PSR-1</code>, it's important to follow a consistent set of style rules when the specs tend give us two or more options.</p>
+<p><a href="http://www.php-fig.org/psr/psr-1/">PSR-1</a> is a PHP "Basic Coding Standard". It defines how the basic structures (<code>if</code>, <code>else</code>, <code>functions</code>, etc.) and statements (<code>includes</code>, <code>namespaces</code>, etc.) should be styled.</p>
+<p>In addition to <code>PSR-1</code>, it's important to follow a consistent set of styled rules when the specs tend give us two or more options.</p>
 <p>The following must be enforced:</p>
 <ul>
 <li>
@@ -409,7 +409,7 @@ $sampleArray2 = [
 <blockquote>
 <p>"This guide extends and expands on PSR-1, the basic coding standard".</p>
 </blockquote>
-<p><code>PSR-2</code> discusses the styling of classes, indenting, line width, keywords (true, false...), etc.</p>
+<p><code>PSR-2</code> discusses the styling of classes, indenting, linewidth, keywords (<code>true</code>, <code>false</code>, etc.) and more.</p>
 <h2 id="folders-and-file-names">Folders and File Names</h2>
 <p>The php filenames (<code>.php</code>) fall into four main types: class files, view file, config files and helpers.</p>
 <ul>
@@ -420,13 +420,13 @@ $sampleArray2 = [
 <p><a href="../../laravel/views/#naming">View Files</a>, or blade files, must be lowercase and use underscore (<code>template_name.blade.php</code>) when more than one word is used.</p>
 </li>
 <li>
-<p><a href="../../laravel/config/">Config files</a> must be named must be lowercase and use underscore (<code>config_files.php</code>) when more than one word is used.</p>
+<p><a href="../../laravel/config/">Config files</a> names must be lowercase and use underscore (<code>config_files.php</code>) when more than one word is used.</p>
 </li>
 <li>
-<p><a href="../../sharelov/helpers/list">Helper files</a> must be named must be lowercase and use underscore (<code>nice_helper.php</code>) when more than one word is used.</p>
+<p><a href="../../sharelov/helpers/list">Helper files</a> names must be lowercase and use underscore (<code>nice_helper.php</code>) when more than one word is used.</p>
 </li>
 </ul>
-<p>Other filenames (<code>.js, .sass, ...</code>) are discussed in their respective sections.</p>
+<p>Other filenames (<code>.js</code>, <code>.sass</code>, etc.) are discussed in their respective sections.</p>
 <h2 id="documentation">Documentation</h2>
 <div class="admonition warning">
 <p class="admonition-title">Note:</p>
@@ -449,7 +449,7 @@ $sampleArray2 = [
 <li>Depends on context</li>
 </ul>
 </div>
-<p>We value readability and simple conventions. Simplicity does not mean, by all means, easy. Even though this is a more abstract concept, these are some of the rules we always need consider:</p>
+<p>We value readability and simple conventions. Simplicity does not mean, by all means, easy. Even though this is a more abstract concept, these are some of the rules we always need to consider:</p>
 <ul>
 <li><strong>Use the <a href="../domain/">Domain vocabulary</a></strong>.</li>
 <li><strong>Don't use Abbreviations:</strong> Variables, properties, methods, etc. must not be abbreviated, even if they are used internally in a class or file. Some examples:<ul>
@@ -457,14 +457,14 @@ $sampleArray2 = [
 <li><code>protected $brand;</code> instead of <code>protected $b;</code></li>
 </ul>
 </li>
-<li><strong>Named Descriptively</strong>: Every properties, primitive, structure, etc. created must describe its intent, even if they are used internally in a class or file. Some examples:<ul>
+<li><strong>Named Descriptively</strong>: Every property, primitive, structure, etc. created must describe its intent, even if they are used internally in a class or file. Some examples:<ul>
 <li><code>$publication_id</code> instead of <code>$id</code></li>
 <li><code>function getUserLevel(){}</code> instead of <code>function level(){}</code></li>
 </ul>
 </li>
 <li><strong>Use the available structures when possible</strong>: Make sure the functionality you need is not available before re-inventing the wheel.</li>
-<li><strong>Avoid one line complicated logic</strong>: Complicated one line expressions are difficult to debug. Try braking up the logic in different pieces when possible.</li>
-<li><strong>Keep code lines short</strong>: Ideally, a code line length <a href="http://www.php-fig.org/psr/psr-2/#1-overview">should be no longer than 80 characters</a> and have a soft limit of 120 characters, Although this is not always possible we must try to brake down complex logic whenever it gets complicated. Here are some examples:</li>
+<li><strong>Avoid one line complicated logic</strong>: Complicated one line expressions are difficult to debug. Try breaking up the logic in different pieces when possible.</li>
+<li><strong>Keep code lines short</strong>: Ideally, a code line length <a href="http://www.php-fig.org/psr/psr-2/#1-overview">should be no longer than 80 characters</a> and have a soft limit of 120 characters, Although this is not always possible we must try to break down complex logic whenever it gets complicated. Here are some examples:</li>
 </ul>
 <pre class="code"><code class="language-php">// Split long assigments onto several lines
 $this_is-&gt;a_very-&gt;very-&gt;long-&gt;statement
@@ -550,7 +550,7 @@ function foo($bar, $baz)
 
 
 <ul>
-<li><strong>Choose carefully your function empty/false value returns</strong>: Sometimes is difficult when choosing <code>false</code>, <code>null</code> or an empty string <code>""</code> as an empty value. As a general rule, it's best to look at the <code>not empty</code> value for clues. If is a boolean then a <code>false</code> should be used. If it's a <code>string</code>, an <code>object</code> or an <code>array</code>, then a <code>null</code> is preferred.</li>
+<li><strong>Choose carefully your function empty/false value returns</strong>: Sometimes is difficult when choosing <code>false</code>, <code>null</code> or an empty string <code>""</code> as an empty value. As a general rule, it's best to look at the <code>not empty</code> value for clues. If it’s a boolean then a <code>false</code> should be used. If it's a <code>string</code>, an <code>object</code> or an <code>array</code>, then a <code>null</code> is preferred.</li>
 <li><strong>Test for different states</strong>: Component usually have <a href="https://medium.com/swlh/the-nine-states-of-design-5bfe9b3d6d85#.p92evsqyd">different states</a>. Even though we design the component for the optimal state, don't neglect the rest of them. Some examples:<ul>
 <li>Test parameters in case wrong ones are given to the component.</li>
 <li>Test parameters in case empty ones are given to the component.</li>
