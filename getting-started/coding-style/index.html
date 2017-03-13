@@ -477,10 +477,28 @@ $some_other_thing = true;</code></pre>
 $this-&gt;someOtherFunc(
     $this-&gt;someEvenOtherFunc(
         'Help me!',
-        array(
+        // inline if there are not too manny values
+        ['foo'  =&gt; 'bar','spam' =&gt; 'eggs',],
+        23
+    ),
+    $this-&gt;someEvenOtherFunc()
+);</code></pre>
+
+
+<pre class="code"><code class="language-php">// Passing params while calling a function
+$this-&gt;someOtherFunc(
+    $this-&gt;someEvenOtherFunc(
+        'Help me!',
+        // indent if there are many values
+        [
             'foo'  =&gt; 'bar',
             'spam' =&gt; 'eggs',
-        ),
+            'yo' =&gt; 'mate',
+            'ying' =&gt; 'yang',
+            'nice' =&gt; 'catch',
+            'keep' =&gt; 'it',
+            'simple' =&gt; 'stupid',
+        ],
         23
     ),
     $this-&gt;someEvenOtherFunc()
