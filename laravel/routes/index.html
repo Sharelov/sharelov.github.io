@@ -413,7 +413,7 @@
 <td>brand.edit</td>
 </tr>
 <tr>
-<td>PUT/PATCH</td>
+<td>PUT/PATCH <code>(not used in sharelov)</code></td>
 <td>/brand/{brand_id}</td>
 <td>update</td>
 <td>brand.update</td>
@@ -476,9 +476,9 @@ Route::get(
 <p>Controllers are, for the most part, by the website sections.</p>
 <p>Controllers in Sharelov follow the following rules:</p>
 <ul>
-<li>The controller's name describe the component or subcomponent and always include the word <code>Component</code> at the end, example: <code>BrandsController</code>, <code>BrandsUploadsController</code>.</li>
-<li><a href="https://laravel.com/docs/5.3/controllers#dependency-injection-and-controllers">Dependency injection</a> is used using constructor or method injection.</li>
-<li>Since we are working with <code>RESTful</code>, <strong>all public methods must conform to the <code>RESTful</code> naming convention</strong>. Each public method must be name the same as a <code>RESTful</code> action (index, create, store, show, edit, update, destroy) and each controller should not have more than seven public methods.</li>
+<li>The controller's name describe the component or subcomponent and always include the word <code>Controller</code> at the end. Components and subcomponents are written using singular words, example: <code>BrandController</code>, <code>BrandUploadController</code>.</li>
+<li><a href="https://laravel.com/docs/5.3/controllers#dependency-injection-and-controllers">Dependency injection</a> is used. Either constructor or method injection is ok.</li>
+<li>Since we are working with <code>RESTful</code>, with a few exceptions, <strong>all public methods must conform to the <code>RESTful</code> naming convention</strong>. Each public method must be name the same as a <code>RESTful</code> action (index, create, store, show, edit, update, destroy) and each controller should not have more than seven public methods.</li>
 <li>Controllers are allowed to have protected (internal) methods that don't follow the <code>RESTful</code> convention.</li>
 <li>For components related to a controller (files, comments, etc.) <strong>a new controller should be created with one or more of the <code>RESTful</code> methods</strong>.</li>
 <li>The name of the controller should define the type of action, not the methods. For example: <code>CampaingImagesController</code>, <code>CampaingCommentsController</code>.</li>
